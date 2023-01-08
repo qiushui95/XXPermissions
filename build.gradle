@@ -1,10 +1,5 @@
 buildscript {
     repositories {
-        // 阿里云云效仓库：https://maven.aliyun.com/mvn/guide
-        maven { url 'https://maven.aliyun.com/repository/public' }
-        maven { url 'https://maven.aliyun.com/repository/google' }
-        // 华为开源镜像：https://mirrors.huaweicloud.com/
-        maven { url 'https://repo.huaweicloud.com/repository/maven/' }
         // JitPack 远程仓库：https://jitpack.io
         maven { url 'https://jitpack.io' }
         mavenCentral()
@@ -14,6 +9,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath 'com.vanniktech:gradle-maven-publish-plugin:0.23.1'
     }
 }
 
