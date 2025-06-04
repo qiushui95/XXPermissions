@@ -2,7 +2,7 @@ package com.hjq.permissions;
 
 import android.app.Activity;
 import android.content.pm.PackageManager;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import java.util.List;
 
 /**

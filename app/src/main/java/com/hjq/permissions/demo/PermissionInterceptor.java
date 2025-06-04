@@ -6,9 +6,9 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import android.text.TextUtils;
 import com.hjq.permissions.OnPermissionCallback;
 import com.hjq.permissions.OnPermissionInterceptor;
@@ -159,7 +159,7 @@ public final class PermissionInterceptor implements OnPermissionInterceptor {
         // 如果这个 Android 版本比较低，那么这个对话框的样式就会变得很丑，准确来讲也不能说丑，而是当时系统的 UI 设计就是那样，它只是跟随系统的样式而已
         Dialog dialog;
         if (activity instanceof AppCompatActivity) {
-            dialog = new android.support.v7.app.AlertDialog.Builder(activity)
+            dialog = new androidx.appcompat.app.AlertDialog.Builder(activity)
                 .setTitle(dialogTitle)
                 .setMessage(dialogMessage)
                 .setCancelable(dialogCancelable)

@@ -4,8 +4,8 @@ import android.Manifest;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import com.hjq.permissions.AndroidManifestInfo.ApplicationInfo;
 import com.hjq.permissions.AndroidManifestInfo.PermissionInfo;
@@ -49,7 +49,7 @@ final class PermissionChecker {
     /**
      * 检查 Fragment 的状态是否正常（Support 包版本）
      */
-    static void checkSupportFragmentStatus(@NonNull android.support.v4.app.Fragment supportFragment) {
+    static void checkSupportFragmentStatus(@NonNull androidx.fragment.app.Fragment supportFragment) {
         if (!supportFragment.isAdded()) {
             // 这个 Fragment 没有添加绑定
             throw new IllegalStateException("This support fragment has no binding added, " +

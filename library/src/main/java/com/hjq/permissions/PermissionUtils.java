@@ -15,8 +15,8 @@ import android.content.res.AssetManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import java.io.BufferedReader;
 import java.io.File;
@@ -204,7 +204,7 @@ final class PermissionUtils {
             } else if (context instanceof ContextWrapper) {
                 // android.content.ContextWrapper
                 // android.content.MutableContextWrapper
-                // android.support.v7.view.ContextThemeWrapper
+                // androidx.appcompat.view.ContextThemeWrapper
                 context = ((ContextWrapper) context).getBaseContext();
             } else {
                 return null;
@@ -224,7 +224,7 @@ final class PermissionUtils {
      * 判断 Fragment 是不是不可用（Support 包版本）
      */
     @SuppressWarnings("deprecation")
-    static boolean isFragmentUnavailable(@Nullable android.support.v4.app.Fragment supportFragment) {
+    static boolean isFragmentUnavailable(@Nullable androidx.fragment.app.Fragment supportFragment) {
         return supportFragment == null || !supportFragment.isAdded() || supportFragment.isRemoving();
     }
 

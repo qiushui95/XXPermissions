@@ -4,8 +4,8 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 /**
  *    author : Android 轮子哥
@@ -77,7 +77,7 @@ final class PermissionActivityIntentHandler {
         return startActivity(new StartActivityDelegateByFragmentApp(fragment), intent);
     }
 
-    static boolean startActivity(@NonNull android.support.v4.app.Fragment fragment, Intent intent) {
+    static boolean startActivity(@NonNull androidx.fragment.app.Fragment fragment, Intent intent) {
         return startActivity(new StartActivityDelegateByFragmentSupport(fragment), intent);
     }
 
@@ -104,7 +104,7 @@ final class PermissionActivityIntentHandler {
         return startActivityForResult(new StartActivityDelegateByFragmentApp(fragment), intent, requestCode);
     }
 
-    static boolean startActivityForResult(@NonNull android.support.v4.app.Fragment fragment, @NonNull Intent intent, int requestCode) {
+    static boolean startActivityForResult(@NonNull androidx.fragment.app.Fragment fragment, @NonNull Intent intent, int requestCode) {
         return startActivityForResult(new StartActivityDelegateByFragmentSupport(fragment), intent, requestCode);
     }
 

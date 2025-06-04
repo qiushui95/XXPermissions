@@ -1,8 +1,8 @@
 package com.hjq.permissions;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 /**
  *    author : Android 轮子哥
